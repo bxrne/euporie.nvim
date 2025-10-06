@@ -40,9 +40,17 @@ This opens euporie-notebook in a Neovim terminal buffer, sets the buffer name to
 
 ```lua
 require('euporie').setup({
-  path = "."  -- Directory to open the notebook session in
+  path = ".",  -- Directory to open the notebook session in
+  graphics_dpi = 300,  -- DPI for graphics rendering (default: 300)
+  graphics_height = 40  -- Maximum graphics height in pixels (default: 40)
 })
 ```
+
+### Configuration Options
+
+- `path` (string): Directory to open the notebook session in. Default: `"."`
+- `graphics_dpi` (number): DPI for graphics rendering. Higher values produce sharper images but may use more resources. Default: `300`
+- `graphics_height` (number): Maximum graphics height in pixels. Default: `40`
 
 ## Features
 

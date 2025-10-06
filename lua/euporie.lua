@@ -3,8 +3,12 @@ local module = require("euporie.module")
 
 ---@class Config
 ---@field path string The path at which to open the session
+---@field graphics_dpi number? The DPI for graphics rendering (default: 300)
+---@field graphics_height number? The maximum graphics height in pixels (default: 40)
 local config = {
   path = ".",
+  graphics_dpi = 300,
+  graphics_height = 40,
 }
 
 ---@class MyModule
