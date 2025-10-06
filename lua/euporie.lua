@@ -4,7 +4,7 @@ local module = require("euporie.module")
 ---@class Config
 ---@field path string The path at which to open the session
 local config = {
-  path = "."
+  path = ".",
 }
 
 ---@class MyModule
