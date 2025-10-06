@@ -1,47 +1,51 @@
-# A Neovim Plugin Template
+# euporie.nvim
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ellisonleao/nvim-plugin-template/lint-test.yml?branch=main&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bxrne/euporie.nvim/lint-test.yml?branch=main&style=for-the-badge)
 ![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)
 
-A template repository for Neovim plugins.
+Edit Jupyter notebooks in Neovim by embedding the euporie TUI.
 
-## Using it
+## Installation
 
-Via `gh`:
+### Requirements
+
+- Neovim >= 0.8.0
+- [euporie](https://euporie.readthedocs.io/en/latest/) installed (see [installation docs](https://euporie.readthedocs.io/en/latest/installation.html))
+
+### Plugin
+
+Using [packer](https://github.com/wbthomason/packer.nvim):
+
+```lua
+use 'bxrne/euporie.nvim'
+```
+
+Using [lazy](https://github.com/folke/lazy.nvim):
+
+```lua
+{ 'bxrne/euporie.nvim' }
+```
+
+## Usage
+
+Open a Jupyter notebook with:
 
 ```
-$ gh repo create my-plugin -p ellisonleao/nvim-plugin-template
+:Notebook
 ```
 
-Via github web page:
+This opens euporie-notebook in a Neovim terminal buffer, sets the buffer name to "euporie (buffer number)", and enters insert mode.
 
-Click on `Use this template`
+## Configuration
 
-![](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
-
-## Features and structure
-
-- 100% Lua
-- Github actions for:
-  - running tests using [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) and [busted](https://olivinelabs.com/busted/)
-  - check for formatting errors (Stylua)
-  - vimdocs autogeneration from README.md file
-  - luarocks release (LUAROCKS_API_KEY secret configuration required)
-
-### Plugin structure
-
+```lua
+require('euporie').setup({
+  path = "."  -- Directory to open the notebook session in
+})
 ```
-.
-├── lua
-│   ├── plugin_name
-│   │   └── module.lua
-│   └── plugin_name.lua
-├── Makefile
-├── plugin
-│   └── plugin_name.lua
-├── README.md
-├── tests
-│   ├── minimal_init.lua
-│   └── plugin_name
-│       └── plugin_name_spec.lua
-```
+
+## Features
+
+- Terminal integration for euporie TUI
+- Automatic buffer naming
+- Seamless insert mode entry

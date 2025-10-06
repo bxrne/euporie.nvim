@@ -1,0 +1,71 @@
+*euporie.txt*      Edit Jupyter Notebooks in Neovim      Last change: 2025 October 06
+
+==============================================================================
+Table of Contents                         *euporie-table-of-contents*
+
+1. euporie.nvim                           |euporie-euporie-nvim|
+   - Installation                  |euporie-installation|
+   - Usage                          |euporie-usage|
+   - Configuration                  |euporie-configuration|
+   - Features                       |euporie-features|
+2. Links                                              |euporie-links|
+
+==============================================================================
+1. euporie.nvim                           *euporie-euporie-nvim*
+
+Edit Jupyter notebooks in Neovim by embedding the euporie TUI.
+
+
+INSTALLATION                            *euporie-installation*
+
+REQUIREMENTS ~
+
+- Neovim >= 0.8.0
+- euporie installed (see installation docs: https://euporie.readthedocs.io/en/latest/installation.html)
+
+PLUGIN ~
+
+Using packer: >
+
+    use 'bxrne/euporie.nvim'
+<
+
+Using lazy: >
+
+    { 'bxrne/euporie.nvim' }
+<
+
+
+USAGE                                   *euporie-usage*
+
+Open a Jupyter notebook with: >
+
+    :Notebook
+<
+
+This opens euporie-notebook in a Neovim terminal buffer, sets the buffer name
+to "euporie (buffer number)", and enters insert mode.
+
+
+CONFIGURATION                           *euporie-configuration*
+
+>
+    require('euporie').setup({
+      path = "."  -- Directory to open the notebook session in
+    })
+<
+
+
+FEATURES                                 *euporie-features*
+
+- Terminal integration for euporie TUI
+- Automatic buffer naming
+- Seamless insert mode entry
+
+==============================================================================
+2. Links                                              *euporie-links*
+
+1. *GitHub*: https://github.com/bxrne/euporie.nvim
+2. *euporie*: https://euporie.readthedocs.io/en/latest/
+
+vim:tw=78:ts=8:noet:ft=help:norl:
