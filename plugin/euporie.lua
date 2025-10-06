@@ -1,1 +1,1 @@
-vim.api.nvim_create_user_command("MyFirstFunction", require("euporie").hello, {})
+vim.api.nvim_create_user_command("Notebook", require("euporie").notebook, {})

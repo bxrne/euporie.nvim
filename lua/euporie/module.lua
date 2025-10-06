@@ -1,9 +1,8 @@
 ---@class CustomModule
 local M = {}
 
----@return string
-M.my_first_function = function(greeting)
-  return greeting
+M.notebook = function()
+  vim.cmd(":terminal euporie-notebook ")
 end
 
 return M

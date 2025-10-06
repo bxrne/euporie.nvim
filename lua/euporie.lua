@@ -2,9 +2,9 @@
 local module = require("euporie.module")
 
 ---@class Config
----@field opt string Your config option
+---@field path string The path at which to open the session
 local config = {
-  opt = "Hello!",
+  path = "."
 }
 
 ---@class MyModule
@@ -20,8 +20,8 @@ M.setup = function(args)
   M.config = vim.tbl_deep_extend("force", M.config, args or {})
 end
 
-M.hello = function()
-  return module.my_first_function(M.config.opt)
+M.notebook = function()
+  return module.notebook()
 end
 
 return M
