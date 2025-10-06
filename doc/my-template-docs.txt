@@ -46,17 +46,17 @@ PLUGIN STRUCTURE ~
 >
     .
     ├── lua
-    │   ├── plugin_name
+    │   ├── euporie
     │   │   └── module.lua
-    │   └── plugin_name.lua
+    │   └── euporie.lua
     ├── Makefile
     ├── plugin
-    │   └── plugin_name.lua
+    │   └── euporie.lua
     ├── README.md
     ├── tests
     │   ├── minimal_init.lua
-    │   └── plugin_name
-    │       └── plugin_name_spec.lua
+    │   └── euporie
+    │       └── euporie_spec.lua
 <
 
 ==============================================================================
